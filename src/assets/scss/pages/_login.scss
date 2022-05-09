@@ -1,0 +1,17 @@
+.page-login {
+
+  .page-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button {
+      @include pxRem(width, 250px);
+      @include pxRem(margin, 50px auto 0px);
+      @include pxRem(padding, 15px 0);
+      @include pxRem(font-size, 20px);
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  }
+}

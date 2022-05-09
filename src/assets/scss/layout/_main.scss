@@ -1,0 +1,70 @@
+.page-main {
+  @include pxRem(padding-top, 93);
+  min-height: 80vh;
+
+  .product-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .product-item {
+      width: 30%;
+      @include pxRem(border-radius, 12px);
+      @include pxRem(margin-bottom, 30px);
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+      &-image {
+        @include pxRem(border-radius, 12px 12px 0 0);
+      }
+
+      &-content {
+        @include pxRem(margin, 20 0);
+        @include pxRem(padding, 0 20);
+
+        .product-name, .product-price {
+          @include pxRem(font-size, 20);
+        }
+
+        .product-name {
+          color: map-get( $colors, primary);
+        }
+
+        .product-price {
+          color: map-get( $colors, secondary);
+          font-weight: map-get($font-weight, bold);
+          float: right;
+        }
+
+        .product-des {
+          @include pxRem(margin-top, 20);
+          color: map-get($colors, txt-gray-dark);
+          font-size: $font-size-md;
+
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+      }
+
+      &-btn {
+        width: 100%;
+        cursor: pointer;
+        border: none;
+
+        @include pxRem(border-radius, 0 0 12px 12px);
+        @include pxRem(padding, 15px);
+        @include pxRem(font-size, 17px);
+        font-weight: map-get($font-weight, bold);
+        background-color: map-get($colors, black);
+        color: map-get($colors, white);
+
+        &:hover, &:focus {
+          background-color: map-get($colors, bg-gray);
+          color: map-get($map: $colors, $key: black);
+        }
+      }
+    }
+  }
+}

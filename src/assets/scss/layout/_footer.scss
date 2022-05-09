@@ -1,0 +1,6 @@
+.page-footer {
+  @include pxRem(padding, 30 20);
+  @include pxRem(font-size, 17);
+  background: map-get($colors, bg-gray);
+  text-align: center;
+}

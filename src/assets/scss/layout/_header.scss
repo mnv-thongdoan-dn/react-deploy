@@ -1,0 +1,77 @@
+.page-header {
+  @include pxRem(padding, 10);
+  background: map-get($colors, bg-gray-light);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+
+  position: fixed;
+  z-index: 99;
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.1);
+
+  .header-logo {
+    @include pxRem(width, 130px);
+  }
+
+  .header-content {
+    @include pxRem(width, 1300px);
+    display: flex;
+    justify-content: space-between;
+    .header-nav {
+      @include pxRem(margin-left, 50px);
+  
+      &-menu {
+        @include pxRem(width, 400px);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+  
+        li a {
+          @include pxRem(font-size, 20);
+          color: map-get($colors, primary);
+          font-weight: map-get($font-weight, bold);
+  
+          &:hover, &:focus {
+            color: map-get( $colors, secondary );
+            transition: all .5s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .header-social {
+      @include pxRem(width, 200px);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  
+      li:first-child {
+        position: relative;
+      }
+  
+      li:first-child span {
+        @include pxRem(width, 25px);
+        @include pxRem(height, 25px);
+        @include pxRem(padding-top, 4px);
+        @include pxRem(font-size, 18px);
+  
+        border-radius: 50%;
+        background-color: red;
+        color: white;
+  
+        text-align: center;
+        font-weight: bold;
+        position: absolute;
+        top: -10px;
+        left: -15px;
+      }
+  
+      li i {
+        @include pxRem(font-size, 25px);
+      }
+    }
+  }
+
+
+}
